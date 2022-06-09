@@ -11483,3 +11483,11 @@ Custom addition
   background-color: grey;
   color: whitesmoke;
 }
+
+.psswrd-btn {
+  background-color: #199319;
+  color: white;
+  size: 150px;
+  padding: 10px;
+  text-decoration: none;
+}

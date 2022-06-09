@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+    {% block content %}
+      <!-- Header résultats-->
+      <section class="page-section bg-moules">
+      </section>
+      <!-- Informations compte-->
+      <section class="page-section">
+          <div class="container px-3 px-lg-4 text-center">
+                <h3 class="text-center mt-0">Mon compte</h3>
+                <hr class="divider" />
+                    <div class="text-center pt-5 pb-2">{{user.username}}</div>
+                    <div class="text-center pb-2">{{user.email}}</div>
+              <a class="psswrd-btn bg-rooibos mt-5" href="{% url 'password' %}">Changer de mot de passe</a>
+          </div>
+      </section>
+{% endblock %}

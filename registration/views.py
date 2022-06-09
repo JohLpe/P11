@@ -33,7 +33,7 @@ def login_page(request):
             login(request, user)
             return redirect('homepage')
         else:
-            messages.info(request, 'Erreur d\'authentidication! Nom '
+            messages.info(request, 'Erreur d\'authentification! Nom '
                           ' d\'utilisateur ou mot de passe incorrect.')
     context = {}
     return render(request, 'registration/login.html', context)
@@ -44,3 +44,17 @@ def logout_user(request):
 
     logout(request)
     return redirect('homepage')
+
+
+def view_account(request):
+    """Shows user account"""
+
+    user = request.user
+    context = {'user': user}
+    return render(request, 'registration/account.html', context)
+
+
+def password_done(request):
+    """Shows user account"""
+
+    return render(request, 'registration/passworddone.html')
